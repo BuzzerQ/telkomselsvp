@@ -18,7 +18,7 @@
             font-family: 'Rajdhani', sans-serif;
             background-color: #030712;
             /* Background Image KV */
-            background-image: url('bg-kv.jpg');
+            background-image: url('bgweb.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -89,19 +89,13 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Email *</label>
-                    <input type="email" id="email" required placeholder="nama@perusahaan.com"
-                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-base">
-                </div>
-
-                <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">No. Telepon / WhatsApp *</label>
                     <input type="tel" id="no_telp" required placeholder="08123456789"
                         class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-base">
                 </div>
 
                 <div>
-                    <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Asal Mitra / Perusahaan *</label>
+                    <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Nama Perusahaan *</label>
                     <input type="text" id="asal_mitra" required placeholder="Nama Perusahaan / Instansi"
                         class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-base">
                 </div>
@@ -168,7 +162,6 @@
 
             const payload = {
                 nama: document.getElementById('nama').value,
-                email: document.getElementById('email').value,
                 no_telp: document.getElementById('no_telp').value,
                 asal_mitra: document.getElementById('asal_mitra').value,
                 jabatan: document.getElementById('jabatan').value
