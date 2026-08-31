@@ -8,7 +8,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Orbitron (Futuristic Display) & Rajdhani (Futuristic Body) -->
+    <!-- Google Fonts: Orbitron & Rajdhani -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
@@ -22,15 +22,12 @@
             font-family: 'Orbitron', sans-serif;
         }
         
-        /* Custom Neon & Glow Effects matching KV */
+        /* Custom Neon Effects */
         .neon-border-blue {
             box-shadow: 0 0 15px rgba(6, 182, 212, 0.4), inset 0 0 15px rgba(6, 182, 212, 0.2);
         }
         .neon-border-pink {
             box-shadow: 0 0 15px rgba(236, 72, 153, 0.4), inset 0 0 15px rgba(236, 72, 153, 0.2);
-        }
-        .neon-text-cyan {
-            text-shadow: 0 0 10px rgba(6, 182, 212, 0.8), 0 0 20px rgba(6, 182, 212, 0.4);
         }
         .neon-text-pink {
             text-shadow: 0 0 10px rgba(236, 72, 153, 0.8), 0 0 20px rgba(236, 72, 153, 0.4);
@@ -69,15 +66,6 @@
             </h2>
         </div>
 
-            <!-- Title Header -->
-            <h1 class="text-xl md:text-2xl font-bold font-orbitron tracking-wider text-white border-b border-cyan-500/30 pb-2 inline-block">
-                STRATEGIC VALUE PARTNERSHIP 2026
-            </h1>
-            <h2 class="text-lg md:text-xl font-extrabold font-orbitron text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-pink-500 mt-2 tracking-wide uppercase">
-                STRENGTH TO IGNITE THE CONVERGENCE
-            </h2>
-        </div>
-
         <!-- FORM CARD -->
         <div id="formContainer" class="bg-gray-950/80 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-6 md:p-8 neon-border-blue transition-all duration-500">
             <h3 class="text-xl font-orbitron font-bold text-white mb-6 flex items-center gap-2">
@@ -86,42 +74,36 @@
             </h3>
 
             <form id="registrationForm" class="space-y-5">
-                <!-- Nama -->
                 <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Nama Lengkap *</label>
                     <input type="text" id="nama" required placeholder="Masukkan nama lengkap"
                         class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-lg">
                 </div>
 
-                <!-- Email -->
                 <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Email *</label>
                     <input type="email" id="email" required placeholder="nama@perusahaan.com"
                         class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-lg">
                 </div>
 
-                <!-- No Telp -->
                 <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">No. Telepon / WhatsApp *</label>
                     <input type="tel" id="no_telp" required placeholder="08123456789"
                         class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-lg">
                 </div>
 
-                <!-- Asal Mitra -->
                 <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Asal Mitra / Perusahaan *</label>
                     <input type="text" id="asal_mitra" required placeholder="Nama Perusahaan / Instansi"
                         class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-lg">
                 </div>
 
-                <!-- Jabatan -->
                 <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Jabatan *</label>
                     <input type="text" id="jabatan" required placeholder="Posisi / Jabatan"
                         class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-lg">
                 </div>
 
-                <!-- Submit Button -->
                 <button type="submit" id="submitBtn"
                     class="w-full mt-6 bg-gradient-to-r from-cyan-500 via-blue-600 to-pink-600 hover:from-cyan-400 hover:to-pink-500 text-white font-orbitron font-bold py-3.5 px-6 rounded-lg tracking-wider uppercase transition-all duration-300 transform active:scale-95 shadow-lg shadow-cyan-500/25">
                     Submit Registration
@@ -129,8 +111,8 @@
             </form>
         </div>
 
-        <!-- UCAPAN SELAMAT DATANG CARD (Sembunyi secara default) -->
-        <div id="welcomeCard" class="hidden bg-gray-950/90 backdrop-blur-md border border-pink-500/40 rounded-2xl p-8 text-center neon-border-pink transition-all duration-500 animate-fade-in">
+        <!-- UCAPAN SELAMAT DATANG CARD -->
+        <div id="welcomeCard" class="hidden bg-gray-950/90 backdrop-blur-md border border-pink-500/40 rounded-2xl p-8 text-center neon-border-pink transition-all duration-500">
             <div class="w-16 h-16 bg-pink-500/10 border border-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -140,7 +122,6 @@
             <p class="text-cyan-400 font-orbitron text-xs tracking-[0.2em] uppercase mb-2">Registration Successful</p>
             <h3 class="text-2xl md:text-3xl font-orbitron font-extrabold text-white mb-2">SELAMAT DATANG!</h3>
             
-            <!-- Dynamic Name & Company -->
             <div class="my-6 py-4 px-2 bg-gray-900/80 rounded-xl border border-cyan-500/20">
                 <p id="welcomeName" class="text-xl md:text-2xl font-orbitron font-bold text-pink-400 neon-text-pink mb-1"></p>
                 <p id="welcomeCompany" class="text-base text-gray-300 font-semibold tracking-wider"></p>
@@ -161,8 +142,8 @@
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        // GANTI URL DI BAWAH INI DENGAN URL WEB APP GOOGLE APPS SCRIPT ANDA
-        const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzjEvuHhF77tGsM8pY31R8J-GyT1Vq5DjoCrssBBiKEgpACbiDO-T1d4labJskZqF8/exec";
+        // GANTI DENGAN URL WEB APP GOOGLE APPS SCRIPT ANDA
+        const GAS_WEB_APP_URL = "URL_WEB_APP_GOOGLE_APPS_SCRIPT_ANDA_DI_SINI";
 
         const form = document.getElementById('registrationForm');
         const submitBtn = document.getElementById('submitBtn');
@@ -172,7 +153,6 @@
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Ubah tombol jadi loading
             submitBtn.disabled = true;
             submitBtn.innerText = 'PROCESSING...';
             submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
@@ -187,18 +167,16 @@
 
             fetch(GAS_WEB_APP_URL, {
                 method: 'POST',
-                mode: 'no-cors', // Menghindari isu CORS pada Apps Script
+                mode: 'no-cors',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(payload)
             })
             .then(() => {
-                // Tampilkan card ucapan selamat datang & isi datanya secara dinamis
                 document.getElementById('welcomeName').innerText = payload.nama;
                 document.getElementById('welcomeCompany').innerText = payload.asal_mitra + " (" + payload.jabatan + ")";
 
-                // Transisi tampilan
                 formContainer.classList.add('hidden');
                 welcomeCard.classList.remove('hidden');
             })
