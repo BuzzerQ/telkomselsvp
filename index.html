@@ -17,6 +17,12 @@
         body {
             font-family: 'Rajdhani', sans-serif;
             background-color: #030712;
+            /* Background Image KV */
+            background-image: url('bg-kv.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         .font-orbitron {
             font-family: 'Orbitron', sans-serif;
@@ -33,95 +39,89 @@
 
         /* Custom Neon Effects */
         .neon-border-blue {
-            box-shadow: 0 0 20px rgba(6, 182, 212, 0.3), inset 0 0 15px rgba(6, 182, 212, 0.15);
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), inset 0 0 15px rgba(6, 182, 212, 0.2);
         }
         .neon-border-pink {
-            box-shadow: 0 0 20px rgba(236, 72, 153, 0.3), inset 0 0 15px rgba(236, 72, 153, 0.15);
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.4), inset 0 0 15px rgba(236, 72, 153, 0.2);
         }
         .neon-text-pink {
             text-shadow: 0 0 10px rgba(236, 72, 153, 0.8), 0 0 20px rgba(236, 72, 153, 0.4);
         }
-        
-        /* Tech Grid Background Overlay */
-        .bg-tech-pattern {
-            background-image: 
-                linear-gradient(to right, rgba(6, 182, 212, 0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(236, 72, 153, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
     </style>
 </head>
-<body class="min-h-screen text-gray-100 flex items-center justify-center p-4 bg-tech-pattern relative overflow-x-hidden">
+<body class="min-h-screen text-gray-100 flex flex-col items-center justify-center p-4 md:p-8 relative overflow-x-hidden">
 
-    <!-- Glowing Background Lights -->
-    <div class="fixed -top-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-[120px] pointer-events-none"></div>
-    <div class="fixed -bottom-40 -right-40 w-96 h-96 bg-fuchsia-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+    <!-- Dark Overlay agar gambar KV tidak terlalu terang/mengganggu keterbacaan teks -->
+    <div class="fixed inset-0 bg-black/50 backdrop-blur-[2px] pointer-events-none z-0"></div>
 
-    <div class="w-full max-w-xl z-10">
+    <!-- MAIN CONTAINER -->
+    <div class="w-full max-w-xl z-10 flex flex-col items-center">
         
-        <!-- Header Branding -->
-        <div class="text-center mb-8">
-            <!-- Logo Telkomsel dari File Lokal GitHub -->
-            <div class="flex justify-center mb-4">
-                <img src="logo-tsel1.png" alt="Telkomsel Logo" class="h-10 md:h-12 w-auto object-contain">
+        <!-- HEADER BRANDING -->
+        <div class="text-center mb-6 w-full">
+            <!-- Logo Telkomsel dari File Lokal -->
+            <div class="flex justify-center mb-3">
+                <img src="logo.png" alt="Telkomsel Logo" class="h-10 md:h-12 w-auto object-contain">
             </div>
 
             <!-- Title Header -->
-            <h1 class="text-xl md:text-2xl font-bold font-orbitron tracking-wider text-white border-b border-cyan-500/30 pb-2 inline-block">
+            <h1 class="text-lg md:text-2xl font-bold font-orbitron tracking-wider text-white border-b border-cyan-500/30 pb-2 inline-block uppercase">
                 STRATEGIC VALUE PARTNERSHIP 2026
             </h1>
+            <br>
             <h2 class="text-base md:text-xl font-extrabold font-orbitron gradient-text mt-2 tracking-wide uppercase">
                 STRENGTH TO IGNITE THE CONVERGENCE
             </h2>
         </div>
 
         <!-- FORM CARD -->
-        <div id="formContainer" class="bg-gray-950/80 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-6 md:p-8 neon-border-blue transition-all duration-500">
+        <div id="formContainer" class="w-full bg-gray-950/85 backdrop-blur-md border border-cyan-500/40 rounded-2xl p-6 md:p-8 neon-border-blue transition-all duration-500">
             <h3 class="text-xl font-orbitron font-bold text-white mb-6 flex items-center gap-2">
                 <span class="w-2 h-5 bg-cyan-400 rounded-sm inline-block"></span>
                 REGISTRATION FORM
             </h3>
 
-            <form id="registrationForm" class="space-y-5">
+            <form id="registrationForm" class="space-y-4">
                 <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Nama Lengkap *</label>
                     <input type="text" id="nama" required placeholder="Masukkan nama lengkap"
-                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-lg">
+                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-base">
                 </div>
 
                 <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Email *</label>
                     <input type="email" id="email" required placeholder="nama@perusahaan.com"
-                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-lg">
+                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-base">
                 </div>
 
                 <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">No. Telepon / WhatsApp *</label>
                     <input type="tel" id="no_telp" required placeholder="08123456789"
-                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-lg">
+                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-base">
                 </div>
 
                 <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Asal Mitra / Perusahaan *</label>
                     <input type="text" id="asal_mitra" required placeholder="Nama Perusahaan / Instansi"
-                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-lg">
+                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-base">
                 </div>
 
                 <div>
                     <label class="block text-sm font-semibold text-cyan-300 mb-1 tracking-wider uppercase">Jabatan *</label>
                     <input type="text" id="jabatan" required placeholder="Posisi / Jabatan"
-                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-lg">
+                        class="w-full bg-gray-900/90 border border-cyan-900 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white rounded-lg px-4 py-2.5 outline-none transition-all duration-300 text-base">
                 </div>
 
+                <!-- Submit Button -->
                 <button type="submit" id="submitBtn"
                     class="w-full mt-6 bg-gradient-to-r from-cyan-500 via-blue-600 to-pink-600 hover:bg-none hover:bg-pink-600 text-white font-orbitron font-bold py-3.5 px-6 rounded-lg tracking-wider uppercase transition-all duration-300 transform hover:scale-[1.01] active:scale-95 shadow-lg shadow-cyan-500/20 hover:shadow-pink-500/50">
-                    Registrasi
+                    Submit Registration
                 </button>
             </form>
         </div>
 
         <!-- UCAPAN SELAMAT DATANG CARD -->
-        <div id="welcomeCard" class="hidden bg-gray-950/90 backdrop-blur-md border border-pink-500/40 rounded-2xl p-8 text-center neon-border-pink transition-all duration-500">
+        <div id="welcomeCard" class="hidden w-full bg-gray-950/90 backdrop-blur-md border border-pink-500/40 rounded-2xl p-8 text-center neon-border-pink transition-all duration-500">
             <div class="w-16 h-16 bg-pink-500/10 border border-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -139,7 +139,7 @@
             <p class="text-gray-300 text-base leading-relaxed mb-6">
                 Terima kasih telah mendaftar dalam acara <br>
                 <span class="font-orbitron font-bold text-cyan-300">Strategic Value Partnership 2026</span>.<br>
-                Kehadiran Anda sangat bernilai bagi kami, selamat menikmati rangkaian acara!
+                Kehadiran Anda sangat bernilai untuk menyalakan konvergensi masa depan.
             </p>
 
             <button onclick="location.reload()" class="inline-block text-xs font-orbitron text-gray-400 hover:text-white underline tracking-widest uppercase">
